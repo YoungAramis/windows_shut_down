@@ -53,11 +53,11 @@ class ShutdownHandler(BaseHTTPRequestHandler):
 
 def run_server():
     """Функция для запуска HTTP сервера."""
-    server_address = (HOST, PORT)  # Адрес и порт сервера
-    httpd = HTTPServer(server_address, ShutdownHandler)  # Создание экземпляра сервера
-    print(f"Сервер запущен на порту {PORT}. Жду команд...")  # Вывод сообщения о запуске сервера
-    httpd.serve_forever()  # Запуск сервера
+    server_address = (HOST, PORT)
+    httpd = HTTPServer(server_address, ShutdownHandler)
+    print(f"Сервер запущен на порту {PORT}. Жду команд...")
+    httpd.serve_forever()
 
 
 if __name__ == '__main__':
-    run_server()  # Запуск функции для запуска сервера при выполнении скрипта
+    run_server()
